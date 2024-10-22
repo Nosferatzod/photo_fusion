@@ -2,45 +2,103 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <link rel="icon" href="./svg/logo.jpg" type="image/icon">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Estúdio Fotográfico</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estúdio Fotográfico - Contato</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
+        .carousel {
+            position: relative;
         }
-        .hover-button:hover {
-            cursor: pointer;
+
+        .carousel-images {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease; /* Transição suave de opacidade */
+        }
+
+        .carousel-images.active {
+            display: block;
+            opacity: 1; /* Opacidade total quando ativo */
         }
     </style>
 </head>
 
-<body class="bg-gray-100">
+<body>
+    <!-- Navbar -->
     <header class="bg-gray-800 text-white">
         <div class="container mx-auto flex justify-between items-center py-4 px-6">
             <div class="text-lg font-bold">PhotoFusion</div>
-            <nav class="space-x-4">
-                <a class="text-blue-400" href="./index.html">Home</a>
-                <a class="hover:text-blue-400" href="./about.html">Quem Somos</a>
-                <a class="hover:text-blue-400" href="./product.html">Produtos</a>
-                <a class="hover:text-blue-400" href="./services.html">Serviços</a>
-                <a class="hover:text-blue-400" href="./budget.html">Orçamentos</a>
-                <a class="hover:text-blue-400" href="./contact.html">Contato</a>
+            <nav class="flex items-center space-x-4">
+                <a href="./index.html" class="font-medium text-teal-500 nav-link">Home</a>
+                <span class="text-gray-500">|</span>
+                <a href="./about.html" class="text-gray-500 nav-link">Quem Somos</a>
+                <span class="text-gray-500">|</span>
+                <a href="./product.html" class="text-gray-500 nav-link">Produtos</a>
+                <span class="text-gray-500">|</span>
+                <a href="./services.html" class="text-gray-500 nav-link">Serviços</a>
+                <span class="text-gray-500">|</span>
+                <a href="./budget.html" class="text-gray-500 nav-link">Orçamentos</a>
+                <span class="text-gray-500">|</span>
+                <a href="./contact.html" class="text-gray-500 nav-link">Contato</a>
             </nav>
         </div>
     </header>
+
     <main>
         <section class="relative bg-cover bg-center h-96" style="background-image: url('./images/banner.jpg');">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
-                <h1 class="text-4xl font-bold mb-4">Bem-vindo ao Estúdio Fotográfico</h1>
+                <h1 class="text-4xl font-bold mb-4 text-teal-500">Bem-vindo ao Estúdio Fotográfico</h1>
                 <p class="text-lg mb-6">Capturamos momentos especiais com arte e dedicação.</p>
-                <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="./services.html">Conheça nossos serviços</a>
+                <a class="bg-blue-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded" href="./services.html">Conheça nossos serviços</a>
             </div>
         </section>
+
+        <!-- Carousel -->
+        <section class="carousel container mx-auto py-12">
+            <div class="carousel-images active">
+                <img class="w-full h-64 object-cover" src="./images/eventos_importantes.jpg" alt="Imagem 1">
+            </div>
+            <div class="carousel-images">
+                <img class="w-full h-64 object-cover" src="./images/produto.jpg" alt="Imagem 2">
+            </div>
+            <div class="carousel-images">
+                <img class="w-full h-64 object-cover" src="./images/evento.jpg" alt="Imagem 3">
+            </div>
+            <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2" onclick="prevSlide()">❮</button>
+            <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2" onclick="nextSlide()">❯</button>
+        </section>
+
+        <script>
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.carousel-images');
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.add('active');
+                    } else {
+                        slide.classList.remove('active');
+                    }
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            setInterval(nextSlide, 5000); // Troca de slide a cada 5 segundos
+        </script>
+
         <section class="container mx-auto py-12">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
@@ -102,20 +160,22 @@
                 </div>
             </div>
         </section>
-        <section class="bg-gray-200 py-12">
+
+        <section class="py-12">
             <div class="container mx-auto text-center">
-                <h2 class="text-2xl font-bold mb-6">Nossa Localização</h2>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <h2 class="text-2xl font-bold mb-6 text-teal-500">Nossa Localização</h2>
+                <div class="bg-blue rounded-lg shadow-md overflow-hidden">
                     <iframe allowfullscreen="" height="450" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153167!3d-37.81627917975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1f9f1b1e0e!2sGoogle!5e0!3m2!1sen!2sus!4v1633022931234!5m2!1sen!2sus" style="border:0;" width="100%" height="450"></iframe>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="bg-gray-800 text-white py-4">
+
+    <footer class="bg-gray-800">
         <div class="container mx-auto text-center">
             <p>© 2024 Estúdio Fotográfico. Todos os direitos reservados.</p>
             <div class="mt-2">
-                <a class="text-white mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white mx-2 " href="#"><i class="fab fa-facebook-f"></i></a>
                 <a class="text-white mx-2" href="#"><i class="fab fa-instagram"></i></a>
                 <a class="text-white mx-2" href="#"><i class="fab fa-twitter"></i></a>
             </div>
