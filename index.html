@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./svg/logo.jpg" type="image/icon">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Estúdio Fotográfico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .hover-button:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-gray-800 text-white">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="text-lg font-bold">PhotoFusion</div>
+            <nav class="space-x-4">
+                <a class="text-blue-400" href="./index.html">Home</a>
+                <a class="hover:text-blue-400" href="./about.html">Quem Somos</a>
+                <a class="hover:text-blue-400" href="./product.html">Produtos</a>
+                <a class="hover:text-blue-400" href="./services.html">Serviços</a>
+                <a class="hover:text-blue-400" href="./budget.html">Orçamentos</a>
+                <a class="hover:text-blue-400" href="./contact.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="relative bg-cover bg-center h-96" style="background-image: url('./images/banner.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
+                <h1 class="text-4xl font-bold mb-4">Bem-vindo ao Estúdio Fotográfico</h1>
+                <p class="text-lg mb-6">Capturamos momentos especiais com arte e dedicação.</p>
+                <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="./services.html">Conheça nossos serviços</a>
+            </div>
+        </section>
+        <section class="container mx-auto py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img alt="Fotografia de Retrato" class="w-full h-48 object-cover" src="./images/muie.jpg" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Fotografia de Retrato</h3>
+                        <p>Retratos que capturam a essência de cada pessoa.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img alt="Fotografia de Casamento" class="w-full h-48 object-cover" src="./images/casamento.jpg" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Fotografia de Casamento</h3>
+                        <p>Momentos inesquecíveis do seu grande dia.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img alt="Fotografia de Eventos" class="w-full h-48 object-cover" src="./images/evento.jpg" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Fotografia de Eventos</h3>
+                        <p>Capturamos cada detalhe do seu evento especial.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center hover-button" 
+                         onclick="window.location.href='./contact.html'" 
+                         onmouseover="this.classList.add('shadow-lg')" 
+                         onmouseout="this.classList.remove('shadow-lg')">
+                        <i class="fas fa-calendar-alt text-4xl text-pink-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Agenda</h3>
+                        <p class="text-gray-600">Confira nossa agenda e veja as datas disponíveis para a sua escolha!</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center hover-button" 
+                         onclick="window.location.href='./about.html'" 
+                         onmouseover="this.classList.add('shadow-lg')" 
+                         onmouseout="this.classList.remove('shadow-lg')">
+                        <i class="fas fa-camera text-4xl text-teal-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Conheça o Estúdio</h3>
+                        <p class="text-gray-600">O estúdio conta com toda a estrutura necessária para o seu projeto, venha fazer uma visita!</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center hover-button" 
+                         onclick="window.location.href='./budget.html'" 
+                         onmouseover="this.classList.add('shadow-lg')" 
+                         onmouseout="this.classList.remove('shadow-lg')">
+                        <i class="fas fa-money-bill-alt text-4xl text-green-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Valores</h3>
+                        <p class="text-gray-600">Confira nossos preços e dados para a locação do estúdio e faça já sua reserva!</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center hover-button" 
+                         onclick="window.location.href='./contact.html'" 
+                         onmouseover="this.classList.add('shadow-lg')" 
+                         onmouseout="this.classList.remove('shadow-lg')">
+                        <i class="fas fa-phone-alt text-4xl text-orange-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Entre em Contato</h3>
+                        <p class="text-gray-600">Você pode nos encontrar em nosso telefone, whatsapp ou e-mail, aguardamos seu contato!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-gray-200 py-12">
+            <div class="container mx-auto text-center">
+                <h2 class="text-2xl font-bold mb-6">Nossa Localização</h2>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <iframe allowfullscreen="" height="450" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153167!3d-37.81627917975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1f9f1b1e0e!2sGoogle!5e0!3m2!1sen!2sus!4v1633022931234!5m2!1sen!2sus" style="border:0;" width="100%" height="450"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>© 2024 Estúdio Fotográfico. Todos os direitos reservados.</p>
+            <div class="mt-2">
+                <a class="text-white mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white mx-2" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="text-white mx-2" href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
