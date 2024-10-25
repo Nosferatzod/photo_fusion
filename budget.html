@@ -16,7 +16,7 @@
     <header class="bg-gray-800 text-white">
         <div class="container mx-auto flex justify-between items-center py-4 px-6">
             <div class="text-lg font-bold">PhotoFusion</div>
-            <nav class="flex items-center space-x-4">
+            <nav class="hidden md:flex items-center space-x-4">
                 <a href="./index.html" class="font-medium text-gray-500 nav-link">Home</a>
                 <span class="text-gray-500">|</span>
                 <a href="./about.html" class="text-gray-500 nav-link">Quem Somos</a>
@@ -29,7 +29,20 @@
                 <span class="text-gray-500">|</span>
                 <a href="./contact.html" class="text-gray-500 nav-link">Contato</a>
             </nav>
+            <!-- Ícone do menu sanduíche (visível em telas pequenas) -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </div>
+        <!-- Menu responsivo que aparece ao clicar no ícone -->
+        <nav id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <a href="./index.html" class="block px-4 py-2 text-gray-500">Home</a>
+            <a href="./about.html" class="block px-4 py-2 text-gray-500">Quem Somos</a>
+            <a href="./product.html" class="block px-4 py-2 text-gray-500">Produtos</a>
+            <a href="./services.html" class="block px-4 py-2 text-gray-500">Serviços</a>
+            <a href="./budget.html" class="block px-4 py-2 text-teal-500">Orçamentos</a>
+            <a href="./contact.html" class="block px-4 py-2 text-gray-500">Contato</a>
+        </nav>
     </header>
 
     <main class="container mx-auto py-12">
@@ -82,6 +95,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

@@ -113,3 +113,13 @@ button:hover {
 button:active {
     transform: translateY(0); /* Retorna ao estado original ao clicar */
 }
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    #mobile-menu {
+        display: block;
+    }
+}
