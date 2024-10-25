@@ -42,15 +42,42 @@
             <a href="./budget.html" class="block px-4 py-2 text-gray-500">Orçamentos</a>
             <a href="./contact.html" class="block px-4 py-2 text-gray-500">Contato</a>
         </nav>
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('show');
+            });
+        </script>
+        <style>
+            #mobile-menu {
+                transition: max-height 0.3s ease;
+                overflow: hidden;
+                max-height: 0;
+            }
+
+            #mobile-menu.show {
+                max-height: 300px;
+                /* Ajuste conforme o necessário */
+            }
+        </style>
     </header>
 
     <main class="flex-grow">
         <section class="container mx-auto py-16 text-center">
             <h2 class="text-teal-500 text-lg mb-8">- QUEM SOMOS -</h2>
-            <p class="mb-4 text-white">No Estúdio Fotográfico, combinamos arte e técnica para capturar momentos inesquecíveis.</p>
-            <p class="mb-4 text-white">Fundado em 2020, nosso estúdio se destaca pela atenção aos detalhes e pela qualidade das imagens. Nossa equipe de fotógrafos é apaixonada por contar histórias através das lentes.</p>
-            <p class="mb-4 text-white">Nossa missão é proporcionar a cada cliente uma experiência única, garantindo não apenas fotos, mas memórias eternas. Cada clique é uma oportunidade de capturar a essência de cada momento.</p>
-            <p class="text-white">Nossos valores são baseados na criatividade, profissionalismo e amor pela fotografia. Estamos aqui para transformar seus momentos especiais em arte!</p>
+            <p class="mb-4 text-white">No Estúdio Fotográfico, combinamos arte e técnica para capturar momentos
+                inesquecíveis.</p>
+            <p class="mb-4 text-white">Fundado em 2020, nosso estúdio se destaca pela atenção aos detalhes e pela
+                qualidade das imagens. Nossa equipe de fotógrafos é apaixonada por contar histórias através das lentes.
+            </p>
+            <p class="mb-4 text-white">Nossa missão é proporcionar a cada cliente uma experiência única, garantindo não
+                apenas fotos, mas memórias eternas. Cada clique é uma oportunidade de capturar a essência de cada
+                momento.</p>
+            <p class="text-white">Nossos valores são baseados na criatividade, profissionalismo e amor pela fotografia.
+                Estamos aqui para transformar seus momentos especiais em arte!</p>
         </section>
 
         <section class="bg-gray-900 text-white py-16">

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
-<body >
+<body>
     <!-- Navbar -->
     <header class="bg-gray-800 text-white">
         <div class="container mx-auto flex justify-between items-center py-4 px-6">
@@ -43,6 +43,27 @@
             <a href="./budget.html" class="block px-4 py-2 text-gray-500">Orçamentos</a>
             <a href="./contact.html" class="block px-4 py-2 text-gray-500">Contato</a>
         </nav>
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('show');
+            });
+        </script>
+        <style>
+            #mobile-menu {
+                transition: max-height 0.3s ease;
+                overflow: hidden;
+                max-height: 0;
+            }
+
+            #mobile-menu.show {
+                max-height: 300px;
+                /* Ajuste conforme o necessário */
+            }
+        </style>
     </header>
 
     <main class="container mx-auto p-8">
@@ -60,16 +81,21 @@
             <div class="flex justify-center items-center mt-6">
                 <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center">
                     <div class="w-full md:w-1/2 p-4">
-                        <img alt="Photographer holding a camera" class="w-full h-auto" src="https://storage.googleapis.com/a1aa/image/mycfvte370lkZ0ryBR7jSMXAgTGVNCLPtLJD6BEuRHXoOGpTA.jpg" />
+                        <img alt="Photographer holding a camera" class="w-full h-auto"
+                            src="https://storage.googleapis.com/a1aa/image/mycfvte370lkZ0ryBR7jSMXAgTGVNCLPtLJD6BEuRHXoOGpTA.jpg" />
                     </div>
                     <div class="w-full md:w-1/2 p-4 text-left">
                         <p class="text-sm font-light tracking-widest text-white">- FOTOGRAFIAS - VÍDEOS -</p>
                         <h2 class="text-5xl font-bold text-teal-500">COMO</h2>
                         <h2 class="text-5xl font-bold text-gray-600 text-white">ATUAMOS</h2>
                         <p class="text-sm font-light tracking-widest mt-2 text-white">VIVEMOS A SUA MELHOR IMAGEM.</p>
-                        <p class="mt-4 text-gray-600 text-white">Somos uma empresa especializada em capturar as melhores imagens dos seus eventos, seja casamento, aniversário, formatura, corporativo ou outros. Temos um portfólio diversificado e uma equipe qualificada para atender as suas necessidades. Entre em contato conosco e solicite um orçamento sem compromisso.</p>
+                        <p class="mt-4 text-gray-600 text-white">Somos uma empresa especializada em capturar as melhores
+                            imagens dos seus eventos, seja casamento, aniversário, formatura, corporativo ou outros.
+                            Temos um portfólio diversificado e uma equipe qualificada para atender as suas necessidades.
+                            Entre em contato conosco e solicite um orçamento sem compromisso.</p>
                         <div class="mt-6">
-                            <a class="inline-block bg-teal-500 text-white text-sm font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-teal-600 transition duration-300" href="./contact.html">
+                            <a class="inline-block bg-teal-500 text-white text-sm font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-teal-600 transition duration-300"
+                                href="./contact.html">
                                 <i class="fas fa-camera mr-2"></i> VAMOS FOTOGRAFAR
                             </a>
                         </div>
