@@ -17,16 +17,18 @@
         .carousel-images {
             display: none;
             opacity: 0;
-            transition: opacity 1s ease; /* Transição suave de opacidade */
+            transition: opacity 1s ease;
+            /* Transição suave de opacidade */
         }
 
         .carousel-images.active {
             display: block;
-            opacity: 1; /* Opacidade total quando ativo */
+            opacity: 1;
+            /* Opacidade total quando ativo */
         }
     </style>
 
-    
+
 </head>
 
 <body>
@@ -60,15 +62,38 @@
             <a href="./budget.html" class="block px-4 py-2 text-gray-500">Orçamentos</a>
             <a href="./contact.html" class="block px-4 py-2 text-gray-500">Contato</a>
         </nav>
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('show');
+            });
+        </script>
+        <style>
+            #mobile-menu {
+                transition: max-height 0.3s ease;
+                overflow: hidden;
+                max-height: 0;
+            }
+
+            #mobile-menu.show {
+                max-height: 300px;
+                /* Ajuste conforme o necessário */
+            }
+        </style>
     </header>
-    
+
 
     <main>
         <section class="relative bg-cover bg-center h-96" style="background-image: url('./images/banner.jpg');">
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
+            <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
                 <h1 class="text-4xl font-bold mb-4 text-teal-500">Bem-vindo ao Estúdio Fotográfico</h1>
                 <p class="text-lg mb-6">Capturamos momentos especiais com arte e dedicação.</p>
-                <a class="bg-blue-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded" href="./services.html">Conheça nossos serviços</a>
+                <a class="bg-blue-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded"
+                    href="./services.html">Conheça nossos serviços</a>
             </div>
         </section>
 
@@ -83,8 +108,10 @@
             <div class="carousel-images">
                 <img class="w-full h-64 object-cover" src="./images/evento.jpg" alt="Imagem 3">
             </div>
-            <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2" onclick="prevSlide()">❮</button>
-            <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2" onclick="nextSlide()">❯</button>
+            <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2"
+                onclick="prevSlide()">❮</button>
+            <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2"
+                onclick="nextSlide()">❯</button>
         </section>
 
         <script>
@@ -114,6 +141,8 @@
             setInterval(nextSlide, 5000); // Troca de slide a cada 5 segundos
         </script>
 
+
+
         <section class="container mx-auto py-12">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
@@ -140,37 +169,37 @@
             </div>
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center hover-button" 
-                         onclick="window.location.href='./contact.html'" 
-                         onmouseover="this.classList.add('shadow-lg')" 
-                         onmouseout="this.classList.remove('shadow-lg')">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center hover-button"
+                        onclick="window.location.href='./contact.html'" onmouseover="this.classList.add('shadow-lg')"
+                        onmouseout="this.classList.remove('shadow-lg')">
                         <i class="fas fa-calendar-alt text-4xl text-pink-500 mb-4"></i>
                         <h3 class="text-xl font-semibold mb-2">Agenda</h3>
-                        <p class="text-gray-600">Confira nossa agenda e veja as datas disponíveis para a sua escolha!</p>
+                        <p class="text-gray-600">Confira nossa agenda e veja as datas disponíveis para a sua escolha!
+                        </p>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center hover-button" 
-                         onclick="window.location.href='./about.html'" 
-                         onmouseover="this.classList.add('shadow-lg')" 
-                         onmouseout="this.classList.remove('shadow-lg')">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center hover-button"
+                        onclick="window.location.href='./about.html'" onmouseover="this.classList.add('shadow-lg')"
+                        onmouseout="this.classList.remove('shadow-lg')">
                         <i class="fas fa-camera text-4xl text-teal-500 mb-4"></i>
                         <h3 class="text-xl font-semibold mb-2">Conheça o Estúdio</h3>
-                        <p class="text-gray-600">O estúdio conta com toda a estrutura necessária para o seu projeto, venha fazer uma visita!</p>
+                        <p class="text-gray-600">O estúdio conta com toda a estrutura necessária para o seu projeto,
+                            venha fazer uma visita!</p>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center hover-button" 
-                         onclick="window.location.href='./budget.html'" 
-                         onmouseover="this.classList.add('shadow-lg')" 
-                         onmouseout="this.classList.remove('shadow-lg')">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center hover-button"
+                        onclick="window.location.href='./budget.html'" onmouseover="this.classList.add('shadow-lg')"
+                        onmouseout="this.classList.remove('shadow-lg')">
                         <i class="fas fa-money-bill-alt text-4xl text-green-500 mb-4"></i>
                         <h3 class="text-xl font-semibold mb-2">Valores</h3>
-                        <p class="text-gray-600">Confira nossos preços e dados para a locação do estúdio e faça já sua reserva!</p>
+                        <p class="text-gray-600">Confira nossos preços e dados para a locação do estúdio e faça já sua
+                            reserva!</p>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center hover-button" 
-                         onclick="window.location.href='./contact.html'" 
-                         onmouseover="this.classList.add('shadow-lg')" 
-                         onmouseout="this.classList.remove('shadow-lg')">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center hover-button"
+                        onclick="window.location.href='./contact.html'" onmouseover="this.classList.add('shadow-lg')"
+                        onmouseout="this.classList.remove('shadow-lg')">
                         <i class="fas fa-phone-alt text-4xl text-orange-500 mb-4"></i>
                         <h3 class="text-xl font-semibold mb-2">Entre em Contato</h3>
-                        <p class="text-gray-600">Você pode nos encontrar em nosso telefone, whatsapp ou e-mail, aguardamos seu contato!</p>
+                        <p class="text-gray-600">Você pode nos encontrar em nosso telefone, whatsapp ou e-mail,
+                            aguardamos seu contato!</p>
                     </div>
                 </div>
             </div>
@@ -180,7 +209,9 @@
             <div class="container mx-auto text-center">
                 <h2 class="text-2xl font-bold mb-6 text-teal-500">Nossa Localização</h2>
                 <div class="bg-blue rounded-lg shadow-md overflow-hidden">
-                    <iframe allowfullscreen="" height="450" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153167!3d-37.81627917975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1f9f1b1e0e!2sGoogle!5e0!3m2!1sen!2sus!4v1633022931234!5m2!1sen!2sus" style="border:0;" width="100%" height="450"></iframe>
+                    <iframe allowfullscreen="" height="450" loading="lazy"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153167!3d-37.81627917975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1f9f1b1e0e!2sGoogle!5e0!3m2!1sen!2sus!4v1633022931234!5m2!1sen!2sus"
+                        style="border:0;" width="100%" height="450"></iframe>
                 </div>
             </div>
         </section>
@@ -196,9 +227,8 @@
             </div>
         </div>
     </footer>
-    <script src="./js/script.js"></script>
+
 
 </body>
 
 </html>
-

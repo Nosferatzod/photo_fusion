@@ -43,6 +43,27 @@
             <a href="./budget.html" class="block px-4 py-2 text-teal-500">Orçamentos</a>
             <a href="./contact.html" class="block px-4 py-2 text-gray-500">Contato</a>
         </nav>
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('show');
+            });
+        </script>
+        <style>
+            #mobile-menu {
+                transition: max-height 0.3s ease;
+                overflow: hidden;
+                max-height: 0;
+            }
+
+            #mobile-menu.show {
+                max-height: 300px;
+                /* Ajuste conforme o necessário */
+            }
+        </style>
     </header>
 
     <main class="container mx-auto py-12">
@@ -50,15 +71,18 @@
         <form class="bg-white p-8 shadow-md rounded-lg">
             <div class="mb-4">
                 <label for="nome" class="block text-gray-700 font-medium">Nome</label>
-                <input type="text" id="nome" class="w-full p-2 border border-gray-300 rounded" placeholder="Seu Nome" required>
+                <input type="text" id="nome" class="w-full p-2 border border-gray-300 rounded" placeholder="Seu Nome"
+                    required>
             </div>
             <div class="mb-4">
                 <label for="email" class="block text-gray-700 font-medium">Email</label>
-                <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded" placeholder="Seu Email" required>
+                <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded" placeholder="Seu Email"
+                    required>
             </div>
             <div class="mb-4">
                 <label for="telefone" class="block text-gray-700 font-medium">Telefone</label>
-                <input type="tel" id="telefone" class="w-full p-2 border border-gray-300 rounded" placeholder="Seu Telefone" required>
+                <input type="tel" id="telefone" class="w-full p-2 border border-gray-300 rounded"
+                    placeholder="Seu Telefone" required>
             </div>
             <div class="mb-4">
                 <label for="servico" class="block text-gray-700 font-medium">Serviço Desejado</label>
@@ -72,15 +96,20 @@
             </div>
             <div class="mb-4">
                 <label for="mensagem" class="block text-gray-700 font-medium">Mensagem</label>
-                <textarea id="mensagem" class="w-full p-2 border border-gray-300 rounded" rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
+                <textarea id="mensagem" class="w-full p-2 border border-gray-300 rounded" rows="4"
+                    placeholder="Escreva sua mensagem aqui..."></textarea>
             </div>
             <div class="mb-4">
-                <label for="email-empresario" class="block text-gray-700 font-medium">Email para Receber Orçamentos</label>
-                <input type="email" id="email-empresario" class="w-full p-2 border border-gray-300 rounded" placeholder="Seu Email para Receber Orçamentos" required>
+                <label for="email-empresario" class="block text-gray-700 font-medium">Email para Receber
+                    Orçamentos</label>
+                <input type="email" id="email-empresario" class="w-full p-2 border border-gray-300 rounded"
+                    placeholder="Seu Email para Receber Orçamentos" required>
                 <small class="text-gray-500">Insira o e-mail onde deseja receber os orçamentos.</small>
             </div>
             <div class="text-center">
-                <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300">Enviar Solicitação</button>
+                <button type="submit"
+                    class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300">Enviar
+                    Solicitação</button>
             </div>
         </form>
     </main>

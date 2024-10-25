@@ -9,4 +9,5 @@ const mobileMenu = document.getElementById('mobile-menu');
 
 menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
+    menuBtn.classList.toggle('open');  // opcional: pode adicionar animação ao ícone
 });

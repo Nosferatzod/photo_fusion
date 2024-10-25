@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
-<body >
+<body>
     <!-- Navbar -->
     <header class="bg-gray-800 text-white">
         <div class="container mx-auto flex justify-between items-center py-4 px-6">
@@ -43,6 +43,27 @@
             <a href="./budget.html" class="block px-4 py-2 text-gray-500">Orçamentos</a>
             <a href="./contact.html" class="block px-4 py-2 text-gray-500">Contato</a>
         </nav>
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('show');
+            });
+        </script>
+        <style>
+            #mobile-menu {
+                transition: max-height 0.3s ease;
+                overflow: hidden;
+                max-height: 0;
+            }
+
+            #mobile-menu.show {
+                max-height: 300px;
+                /* Ajuste conforme o necessário */
+            }
+        </style>
     </header>
 
     <main class="container mx-auto py-8">
@@ -52,7 +73,8 @@
                 <img alt="Fotografia de Casamento" class="w-full h-48 object-cover" src="./images/casamento2.jpg" />
                 <div class="p-4">
                     <h3 class="text-xl font-bold mt-2">Fotografia de Casamento</h3>
-                    <p class="mt-2">Capturamos cada momento especial do seu grande dia com sensibilidade e criatividade.</p>
+                    <p class="mt-2">Capturamos cada momento especial do seu grande dia com sensibilidade e criatividade.
+                    </p>
                 </div>
             </div>
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
@@ -70,7 +92,8 @@
                 </div>
             </div>
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <img alt="Fotografia de Eventos" class="w-full h-48 object-cover" src="./images/eventos_importantes.jpg" />
+                <img alt="Fotografia de Eventos" class="w-full h-48 object-cover"
+                    src="./images/eventos_importantes.jpg" />
                 <div class="p-4">
                     <h3 class="text-xl font-bold mt-2">Fotografia de Eventos</h3>
                     <p class="mt-2">Cobertura completa de eventos corporativos, aniversários e festas.</p>
@@ -80,24 +103,28 @@
                 <img alt="Fotografia de Moda" class="w-full h-48 object-cover" src="./images/modelo.jpg" />
                 <div class="p-4">
                     <h3 class="text-xl font-bold mt-2">Fotografia de Moda</h3>
-                    <p class="mt-2">Trabalhamos com editoriais e ensaios fotográficos que refletem as últimas tendências.</p>
+                    <p class="mt-2">Trabalhamos com editoriais e ensaios fotográficos que refletem as últimas
+                        tendências.</p>
                 </div>
             </div>
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
                 <img alt="Fotografia de Família" class="w-full h-48 object-cover" src="./images/familia.jpg" />
                 <div class="p-4">
                     <h3 class="text-xl font-bold mt-2">Fotografia de Família</h3>
-                    <p class="mt-2">Momentos inesquecíveis com a sua família, capturados de forma natural e espontânea.</p>
+                    <p class="mt-2">Momentos inesquecíveis com a sua família, capturados de forma natural e espontânea.
+                    </p>
                 </div>
             </div>
         </div>
 
         <div class="flex justify-center items-center space-x-8 px-10 mt-10">
-            <img alt="Foto de André Major" class="w-36 h-36 rounded-full" src="https://storage.googleapis.com/a1aa/image/1CFHzofiMcQyNy0Ch5HVA3A7RBdlHq3dqFXQnMADVmfEVGpTA.jpg" />
+            <img alt="Foto de André Major" class="w-36 h-36 rounded-full"
+                src="https://storage.googleapis.com/a1aa/image/1CFHzofiMcQyNy0Ch5HVA3A7RBdlHq3dqFXQnMADVmfEVGpTA.jpg" />
             <div class="text-left">
                 <h4 class="text-lg font-bold py-4 text-teal-500">- QUERO FALAR COM VOCÊ -</h4>
                 <h2 class="text-4xl font-bold mt-2 text-white">CONTATO</h2>
-                <p class="text-gray-600 mt-2 text-white">contato@andremajorstudio.online / Falar conosco agora: (79) 99987-4002</p>
+                <p class="text-gray-600 mt-2 text-white">contato@andremajorstudio.online / Falar conosco agora: (79)
+                    99987-4002</p>
                 <p class="text-gray-600 mt-2 text-white">Rua Castro Alves n° 314, Ponto Novo, Aracaju/SE</p>
             </div>
         </div>
